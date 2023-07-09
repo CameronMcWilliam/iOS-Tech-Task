@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nxe-uw-h5I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lPu-YO-0Fh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,27 +17,112 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD LUCK!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OK-Xi-XJN">
-                                <rect key="frame" x="154" y="438" width="106" height="20.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" name="AccentColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="center" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Vrv-jo-ZSd" propertyAccessControl="none">
+                                <rect key="frame" x="57" y="324.5" width="300" height="247.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moneybox" translatesAutoresizingMaskIntoConstraints="NO" id="i93-mn-gSI">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="nBz-IJ-dcF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbX-7e-rkk" userLabel="txtUsernameLogin">
+                                        <rect key="frame" x="40" y="95" width="220" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="mNW-Rn-hW5"/>
+                                            <constraint firstAttribute="width" constant="220" id="uS4-ye-yCY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" name="AccentColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xCc-xD-isH" userLabel="txtPasswordLogin">
+                                        <rect key="frame" x="40" y="154" width="220" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="6xz-pf-2yR"/>
+                                            <constraint firstAttribute="width" constant="220" id="Q29-4A-CNp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9y-QH-Dt2" userLabel="btnLogin">
+                                        <rect key="frame" x="117" y="213" width="66" height="34.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34.5" id="1Ca-56-RHy"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="nxe-uw-h5I" eventType="touchUpInside" id="k8l-HB-81W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="V2W-ey-OH2" userLabel="actLogin">
+                                <rect key="frame" x="197" y="591.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="acR-sl-ate"/>
                         <color key="backgroundColor" name="GreyColor"/>
                         <constraints>
-                            <constraint firstItem="7OK-Xi-XJN" firstAttribute="centerY" secondItem="chM-je-gA4" secondAttribute="centerY" id="Dju-5I-EOs"/>
-                            <constraint firstItem="7OK-Xi-XJN" firstAttribute="centerX" secondItem="chM-je-gA4" secondAttribute="centerX" id="Fmx-0t-JJY"/>
+                            <constraint firstItem="Vrv-jo-ZSd" firstAttribute="centerY" secondItem="chM-je-gA4" secondAttribute="centerY" id="2YX-Vk-gXq"/>
+                            <constraint firstItem="V2W-ey-OH2" firstAttribute="centerX" secondItem="acR-sl-ate" secondAttribute="centerX" id="EoW-DS-0n6"/>
+                            <constraint firstItem="Vrv-jo-ZSd" firstAttribute="centerX" secondItem="chM-je-gA4" secondAttribute="centerX" id="O00-mv-D4s"/>
+                            <constraint firstItem="V2W-ey-OH2" firstAttribute="top" secondItem="Vrv-jo-ZSd" secondAttribute="bottom" constant="19.5" id="ue1-Ik-hOl"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="l09-aJ-oDk"/>
+                    <connections>
+                        <outlet property="actLogin" destination="V2W-ey-OH2" id="LKx-dG-Ott"/>
+                        <outlet property="btnLogin" destination="t9y-QH-Dt2" id="rAY-Uc-0Zc"/>
+                        <outlet property="txtEmailLogin" destination="pbX-7e-rkk" id="olE-Tf-kLR"/>
+                        <outlet property="txtPasswordLogin" destination="xCc-xD-isH" id="xSR-Uu-NBt"/>
+                        <segue destination="w2w-bR-agy" kind="show" identifier="LoginSuccess" id="QKC-yG-oSy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZo-gs-e4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="107" y="28"/>
+            <point key="canvasLocation" x="1015.9420289855074" y="27.455357142857142"/>
+        </scene>
+        <!--home-->
+        <scene sceneID="Egl-Ee-rWY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="home" id="w2w-bR-agy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8ao-2i-8rC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Reb-0R-2CW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708.6956521739132" y="26.785714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oFn-66-nkI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lPu-YO-0Fh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CAM-Wx-8BT">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nxe-uw-h5I" kind="relationship" relationship="rootViewController" id="yEi-YJ-hVA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRE-bV-hVB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="27.455357142857142"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="AccentColor"/>
     <resources>
+        <image name="moneybox" width="300" height="70"/>
         <namedColor name="AccentColor">
             <color red="0.34299999475479126" green="0.75" blue="0.70999997854232788" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

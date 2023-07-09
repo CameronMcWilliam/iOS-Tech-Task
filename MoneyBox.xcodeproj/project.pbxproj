@@ -16,6 +16,9 @@
 		B2CA47672794D69A0041B3A5 /* StubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA47662794D69A0041B3A5 /* StubData.swift */; };
 		B2CA47712794D8E50041B3A5 /* LoginSucceed.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CA47692794D6D70041B3A5 /* LoginSucceed.json */; };
 		B2CA47B42796052F0041B3A5 /* Accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CA47B2279604A10041B3A5 /* Accounts.json */; };
+		BB746D652A5751A90073F786 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB746D642A5751A90073F786 /* HomeViewController.swift */; };
+		BBAA2DDF2A5B54870008A078 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBAA2DDE2A5B54870008A078 /* Home.storyboard */; };
+		BBC515C12A5B4CF100E9988B /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC515C02A5B4CF100E9988B /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,9 @@
 		B2CA47662794D69A0041B3A5 /* StubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubData.swift; sourceTree = "<group>"; };
 		B2CA47692794D6D70041B3A5 /* LoginSucceed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LoginSucceed.json; sourceTree = "<group>"; };
 		B2CA47B2279604A10041B3A5 /* Accounts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Accounts.json; sourceTree = "<group>"; };
+		BB746D642A5751A90073F786 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BBAA2DDE2A5B54870008A078 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		BBC515C02A5B4CF100E9988B /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,9 @@
 				B2CA46D42793508A0041B3A5 /* Assets.xcassets */,
 				B2CA46D62793508A0041B3A5 /* LaunchScreen.storyboard */,
 				B2CA46D92793508A0041B3A5 /* Info.plist */,
+				BB746D642A5751A90073F786 /* HomeViewController.swift */,
+				BBC515C02A5B4CF100E9988B /* ProductDetailViewController.swift */,
+				BBAA2DDE2A5B54870008A078 /* Home.storyboard */,
 			);
 			path = MoneyBox;
 			sourceTree = "<group>";
@@ -209,6 +218,7 @@
 				B2CA46D82793508A0041B3A5 /* LaunchScreen.storyboard in Resources */,
 				B2CA47712794D8E50041B3A5 /* LoginSucceed.json in Resources */,
 				B2CA46D52793508A0041B3A5 /* Assets.xcassets in Resources */,
+				BBAA2DDF2A5B54870008A078 /* Home.storyboard in Resources */,
 				B228EA6C2880B30B00B35F16 /* Login.storyboard in Resources */,
 				B2CA47B42796052F0041B3A5 /* Accounts.json in Resources */,
 			);
@@ -229,7 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2CA46CC279350880041B3A5 /* AppDelegate.swift in Sources */,
+				BBC515C12A5B4CF100E9988B /* ProductDetailViewController.swift in Sources */,
 				B228EA6B2880B30B00B35F16 /* LoginViewController.swift in Sources */,
+				BB746D652A5751A90073F786 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
