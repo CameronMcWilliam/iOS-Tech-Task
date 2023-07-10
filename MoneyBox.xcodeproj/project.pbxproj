@@ -18,6 +18,7 @@
 		B2CA47B42796052F0041B3A5 /* Accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CA47B2279604A10041B3A5 /* Accounts.json */; };
 		BB746D652A5751A90073F786 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB746D642A5751A90073F786 /* HomeViewController.swift */; };
 		BBAA2DDF2A5B54870008A078 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBAA2DDE2A5B54870008A078 /* Home.storyboard */; };
+		BBAA2DE42A5C6DAD0008A078 /* Nunito-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBAA2DE32A5C6D690008A078 /* Nunito-VariableFont_wght.ttf */; };
 		BBC515C12A5B4CF100E9988B /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC515C02A5B4CF100E9988B /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		B2CA47B2279604A10041B3A5 /* Accounts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Accounts.json; sourceTree = "<group>"; };
 		BB746D642A5751A90073F786 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BBAA2DDE2A5B54870008A078 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		BBAA2DE32A5C6D690008A078 /* Nunito-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		BBC515C02A5B4CF100E9988B /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 		B2CA46CA279350880041B3A5 /* MoneyBox */ = {
 			isa = PBXGroup;
 			children = (
+				BBAA2DE22A5C6D640008A078 /* fonts */,
 				B228EA6A2880B30B00B35F16 /* Login.storyboard */,
 				B228EA692880B30B00B35F16 /* LoginViewController.swift */,
 				B2CA46CB279350880041B3A5 /* AppDelegate.swift */,
@@ -127,6 +130,14 @@
 				B24EED92288ED5740016C233 /* Networking */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		BBAA2DE22A5C6D640008A078 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BBAA2DE32A5C6D690008A078 /* Nunito-VariableFont_wght.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBAA2DE42A5C6DAD0008A078 /* Nunito-VariableFont_wght.ttf in Resources */,
 				B2CA46D82793508A0041B3A5 /* LaunchScreen.storyboard in Resources */,
 				B2CA47712794D8E50041B3A5 /* LoginSucceed.json in Resources */,
 				B2CA46D52793508A0041B3A5 /* Assets.xcassets in Resources */,

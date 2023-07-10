@@ -34,6 +34,11 @@ class LoginViewController: UIViewController {
         return emailPred.evaluate(with: email)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let session = SessionManager()
+        session.removeUserToken()
+    }
+    
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         actLogin.startAnimating()

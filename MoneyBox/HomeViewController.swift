@@ -15,7 +15,11 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var lblMoneyBox: UILabel!
 }
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+protocol RefreshDelegate: AnyObject {
+    func refreshData()
+}
+
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, RefreshDelegate {
     var loginResponse: LoginResponse?
     var accountResponse: AccountResponse?
     var session: SessionManager?
@@ -26,33 +30,53 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     var products: [Product] = [] // This array will store your products
     var productResponses: [ProductResponse] = []
-
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        productsTableView.dataSource = self
-        productsTableView.delegate = self
-
+    func populateUI() {
         if let loginResponse = self.loginResponse {
            let userFirstName = loginResponse.user.firstName
            let userLastName = loginResponse.user.lastName
            lblWelcome.text = "Hello \(userFirstName ?? "") \(userLastName ?? "")!"
         }
 
-        if let accountResponse {
+        if let accountResponse = self.accountResponse {
             if let totalPlanValue = accountResponse.totalPlanValue {
                 self.lblPlanValue.text = "Total Plan Value: £\(String(totalPlanValue))"
             }
             if let productResponses = accountResponse.productResponses {
-                for productResponse in productResponses {
-                    self.productResponses.append(productResponse)
-                }
-//                DispatchQueue.main.async {
-//                    self.productsTableView.reloadData()
-//                }
+                self.productResponses = productResponses
             }
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        productsTableView.dataSource = self
+        productsTableView.delegate = self
+        
+        populateUI()
+        
+    }
+    
+    func refreshData() {
+        let dataProvider = DataProvider()
+        dataProvider.fetchProducts() { result in
+            switch result {
+            case .success(let newAccountResponse):
+                self.accountResponse = newAccountResponse
+                self.populateUI()
+                DispatchQueue.main.async {
+                    self.productsTableView.reloadData()
+                }
+            case .failure(let error):
+                // Handle the error here
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                self.performSegue(withIdentifier: "TokenExpired", sender: alert)
+            }
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,7 +92,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let productResponse = productResponses[indexPath.row]
         cell.lblProductName.text = productResponse.product?.friendlyName
         cell.lblPlanValue.text = "£\(String(productResponse.planValue ?? 0))"
-        cell.lblMoneyBox.text = "Moneybox: \(String(productResponse.moneybox ?? 0))"
+        cell.lblMoneyBox.text = "Moneybox: £\(String(productResponse.moneybox ?? 0))"
         print("Cell for row at \(indexPath.row) created.")
         return cell
     }
@@ -83,6 +107,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let vcProductDetail = segue.destination as! ProductDetailViewController
             let object = sender as! ProductResponse
             vcProductDetail.product = object
+            vcProductDetail.delegate = self
         }
     }
 
