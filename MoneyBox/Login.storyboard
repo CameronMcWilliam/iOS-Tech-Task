@@ -22,15 +22,20 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moneybox" translatesAutoresizingMaskIntoConstraints="NO" id="i93-mn-gSI">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Logo of MoneyBox is displayed" label="Money Box Logo">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="nBz-IJ-dcF"/>
+                                            <constraint firstAttribute="width" constant="300" id="nuS-fF-5aa"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbX-7e-rkk" userLabel="txtUsernameLogin">
-                                        <rect key="frame" x="40" y="95" width="220" height="34"/>
+                                        <rect key="frame" x="0.0" y="95" width="300" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Enter your email in this field to log in" label="Email Field"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="mNW-Rn-hW5"/>
-                                            <constraint firstAttribute="width" constant="220" id="uS4-ye-yCY"/>
+                                            <constraint firstAttribute="width" constant="300" id="uS4-ye-yCY" userLabel="width = 300"/>
                                         </constraints>
                                         <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -44,18 +49,21 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xCc-xD-isH" userLabel="txtPasswordLogin">
-                                        <rect key="frame" x="40" y="154" width="220" height="34"/>
+                                        <rect key="frame" x="0.0" y="154" width="300" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Enter your password in this field to log in" label="Password field"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="6xz-pf-2yR"/>
-                                            <constraint firstAttribute="width" constant="220" id="Q29-4A-CNp"/>
+                                            <constraint firstAttribute="width" constant="300" id="Q29-4A-CNp"/>
                                         </constraints>
                                         <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9y-QH-Dt2" userLabel="btnLogin">
-                                        <rect key="frame" x="117.5" y="213" width="65.5" height="34.5"/>
+                                        <rect key="frame" x="100" y="213" width="100" height="34.5"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Press this button to login" label="Login button"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34.5" id="1Ca-56-RHy"/>
+                                            <constraint firstAttribute="width" constant="100" id="a6o-Ak-2Nx"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled">
