@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3FR-6V-mhc">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides dynamicTypePreference="3"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-VariableFont_wght.ttf">
+            <string>Nunito-Bold</string>
+            <string>Nunito-Regular</string>
+            <string>Nunito-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="EGk-90-GSy">
+            <objects>
+                <viewController storyboardIdentifier="home" id="kPs-US-ucP" customClass="HomeViewController" customModule="MoneyBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tPu-T5-BOL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4ak-uK-WyY">
+                                <rect key="frame" x="16" y="254" width="361" height="564"/>
+                                <color key="backgroundColor" name="GreyColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="productCell" rowHeight="170" id="Eyf-Er-rhM" customClass="ProductTableViewCell" customModule="MoneyBox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="170"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eyf-Er-rhM" id="5Z1-0t-69b">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrm-cv-Xqf" userLabel="Lbl Product Name">
+                                                    <rect key="frame" x="16" y="10.999999999999998" width="325" height="23.333333333333329"/>
+                                                    <accessibility key="accessibilityConfiguration" hint="Name of the current displayed product." label="Product name"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIa-93-x3A">
+                                                    <rect key="frame" x="16" y="67.333333333333329" width="325" height="23.333333333333329"/>
+                                                    <accessibility key="accessibilityConfiguration" hint="Plan value in currently displayed product." label="Plan value"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpi-Xz-IlL">
+                                                    <rect key="frame" x="16" y="122.66666666666667" width="325" height="23.333333333333329"/>
+                                                    <accessibility key="accessibilityConfiguration" hint="Value of moneybox in currently displayed product." label="Moneybox Value"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" name="AccentColor"/>
+                                            <constraints>
+                                                <constraint firstItem="mrm-cv-Xqf" firstAttribute="leading" secondItem="DIa-93-x3A" secondAttribute="leading" id="4US-lq-m4C"/>
+                                                <constraint firstItem="mrm-cv-Xqf" firstAttribute="trailing" secondItem="DIa-93-x3A" secondAttribute="trailing" id="5RG-Re-Xs1"/>
+                                                <constraint firstItem="DIa-93-x3A" firstAttribute="top" secondItem="mrm-cv-Xqf" secondAttribute="bottom" constant="33" id="5q3-q2-yxo"/>
+                                                <constraint firstItem="DIa-93-x3A" firstAttribute="leading" secondItem="hpi-Xz-IlL" secondAttribute="leading" id="Iya-s7-yvz"/>
+                                                <constraint firstItem="mrm-cv-Xqf" firstAttribute="top" secondItem="5Z1-0t-69b" secondAttribute="topMargin" id="WFe-Yx-jPj"/>
+                                                <constraint firstItem="hpi-Xz-IlL" firstAttribute="top" secondItem="DIa-93-x3A" secondAttribute="bottom" constant="32" id="fNr-do-rTL"/>
+                                                <constraint firstItem="mrm-cv-Xqf" firstAttribute="trailing" secondItem="5Z1-0t-69b" secondAttribute="trailingMargin" id="ldX-54-tPE"/>
+                                                <constraint firstItem="DIa-93-x3A" firstAttribute="trailing" secondItem="hpi-Xz-IlL" secondAttribute="trailing" id="wdI-nR-bfi"/>
+                                                <constraint firstItem="mrm-cv-Xqf" firstAttribute="leading" secondItem="5Z1-0t-69b" secondAttribute="leadingMargin" constant="-4" id="xBc-M1-QlP"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="GreyColor"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Displaying information about your products." label="Product view">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <connections>
+                                            <outlet property="lblMoneyBox" destination="hpi-Xz-IlL" id="ukp-Yc-P5t"/>
+                                            <outlet property="lblPlanValue" destination="DIa-93-x3A" id="j6T-Jo-ett"/>
+                                            <outlet property="lblProductName" destination="mrm-cv-Xqf" id="1uZ-ca-GnZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="kPs-US-ucP" id="ymM-Py-PEx"/>
+                                </connections>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="moneybox" translatesAutoresizingMaskIntoConstraints="NO" id="GTN-Oz-NWZ">
+                                <rect key="frame" x="46.666666666666657" y="103" width="300" height="35"/>
+                                <accessibility key="accessibilityConfiguration" hint="Moneybox logo is at the top of the screen." label="Moneybox Logo">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="MNC-ka-mOU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Plan Value: {Value}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ik-OT-7Pp">
+                                <rect key="frame" x="92" y="195.33333333333334" width="209" height="24.666666666666657"/>
+                                <accessibility key="accessibilityConfiguration" hint="Displaying your total plan value at Moneybox" label="Total Plan Value"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, {User}!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9D-nN-AVF" userLabel="lblWelcome">
+                                <rect key="frame" x="128" y="160" width="137.33333333333337" height="23.333333333333343"/>
+                                <accessibility key="accessibilityConfiguration" hint="Friendly message shown with your name." label="Welcome"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RSk-AT-Xsx"/>
+                        <color key="backgroundColor" name="GreyColor"/>
+                        <constraints>
+                            <constraint firstItem="GTN-Oz-NWZ" firstAttribute="centerX" secondItem="RSk-AT-Xsx" secondAttribute="centerX" id="41x-vi-aVT"/>
+                            <constraint firstItem="RSk-AT-Xsx" firstAttribute="trailing" secondItem="4ak-uK-WyY" secondAttribute="trailing" constant="16" id="9bp-cb-x0A"/>
+                            <constraint firstItem="4ak-uK-WyY" firstAttribute="leading" secondItem="RSk-AT-Xsx" secondAttribute="leading" constant="16" id="9u3-mA-8PU"/>
+                            <constraint firstItem="9Ik-OT-7Pp" firstAttribute="centerX" secondItem="RSk-AT-Xsx" secondAttribute="centerX" id="Dde-bu-sKx"/>
+                            <constraint firstItem="9Ik-OT-7Pp" firstAttribute="top" secondItem="x9D-nN-AVF" secondAttribute="bottom" constant="12" id="YOU-ut-GzF"/>
+                            <constraint firstItem="RSk-AT-Xsx" firstAttribute="bottom" secondItem="4ak-uK-WyY" secondAttribute="bottom" id="ZJH-ob-aFF"/>
+                            <constraint firstItem="4ak-uK-WyY" firstAttribute="centerX" secondItem="RSk-AT-Xsx" secondAttribute="centerX" id="fNr-mW-M3Q"/>
+                            <constraint firstItem="GTN-Oz-NWZ" firstAttribute="top" secondItem="RSk-AT-Xsx" secondAttribute="top" id="k4x-4o-4LG"/>
+                            <constraint firstItem="4ak-uK-WyY" firstAttribute="top" secondItem="9Ik-OT-7Pp" secondAttribute="bottom" constant="34" id="nEq-Vo-rWA" userLabel="Products Table View.top = Lbl Plan Value.bottom + 30"/>
+                            <constraint firstItem="x9D-nN-AVF" firstAttribute="top" secondItem="GTN-Oz-NWZ" secondAttribute="bottom" constant="22" id="nV0-LO-YXm" userLabel="lblWelcome.top = moneybox.bottom + 30"/>
+                            <constraint firstItem="x9D-nN-AVF" firstAttribute="centerX" secondItem="RSk-AT-Xsx" secondAttribute="centerX" id="x07-Mj-jf4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MIm-mG-ZG7"/>
+                    <connections>
+                        <outlet property="lblPlanValue" destination="9Ik-OT-7Pp" id="MDF-kt-wfD"/>
+                        <outlet property="lblWelcome" destination="x9D-nN-AVF" id="ZLe-zI-wjp"/>
+                        <outlet property="productsTableView" destination="4ak-uK-WyY" id="JFH-DC-ckV"/>
+                        <segue destination="0b7-Kx-ZyG" kind="presentation" identifier="showProductDetail" id="6za-3O-iT3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PEE-k6-qqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1643.5114503816794" y="-947.18309859154931"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6jJ-X4-kSG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3FR-6V-mhc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tDG-lx-hd9">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kPs-US-ucP" kind="relationship" relationship="rootViewController" id="qwU-4C-Yfm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="slY-1e-Xd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716.79389312977094" y="-947.18309859154931"/>
+        </scene>
+        <!--Product Detail View Controller-->
+        <scene sceneID="P3o-8d-gJR">
+            <objects>
+                <viewController storyboardIdentifier="productDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0b7-Kx-ZyG" customClass="ProductDetailViewController" customModule="MoneyBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M0d-hb-bjE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DMD-C4-K33">
+                                <rect key="frame" x="10" y="318.66666666666669" width="373" height="204.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfa-Id-geP">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Name of the current displayed product." label="Product name"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3w1-AH-JkC"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="36" name="Nunito-SemiBold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Za-u3-HnG">
+                                        <rect key="frame" x="0.0" y="50" width="373" height="60"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Plan value in currently displayed product." label="Plan value"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="pwu-qb-jKM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJF-cu-fMw">
+                                        <rect key="frame" x="0.0" y="110" width="373" height="60"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Value of moneybox in currently displayed product." label="Moneybox Value"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="3WI-Xx-VPY" userLabel="height = 40"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jis-gM-fEb" userLabel="btnAdd">
+                                        <rect key="frame" x="0.0" y="170" width="373" height="34.666666666666657"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Button to quick deposit into the product." label="Add button"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34.5" id="0vf-Lq-JK7"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34.5" id="Kxl-4d-2TB"/>
+                                            <constraint firstAttribute="width" constant="200" id="amb-jn-YlX"/>
+                                        </constraints>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Add">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="17" name="Nunito-Bold"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addBtnpressed:" destination="0b7-Kx-ZyG" eventType="touchUpInside" id="dJZ-3a-DFw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2Za-u3-HnG" firstAttribute="top" secondItem="tfa-Id-geP" secondAttribute="bottom" id="WWo-en-Cv9"/>
+                                    <constraint firstItem="Jis-gM-fEb" firstAttribute="top" secondItem="aJF-cu-fMw" secondAttribute="bottom" id="eDk-8T-zZC"/>
+                                    <constraint firstItem="aJF-cu-fMw" firstAttribute="top" secondItem="2Za-u3-HnG" secondAttribute="bottom" id="jvk-g2-xsC"/>
+                                </constraints>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="qoM-1j-jIV">
+                                <rect key="frame" x="186.66666666666666" y="537" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tfO-g2-GX0"/>
+                        <color key="backgroundColor" name="GreyColor"/>
+                        <constraints>
+                            <constraint firstItem="DMD-C4-K33" firstAttribute="centerX" secondItem="tfO-g2-GX0" secondAttribute="centerX" id="1HJ-0i-1ec"/>
+                            <constraint firstItem="2Za-u3-HnG" firstAttribute="centerX" secondItem="tfO-g2-GX0" secondAttribute="centerX" id="5vQ-hw-Q3U"/>
+                            <constraint firstItem="DMD-C4-K33" firstAttribute="centerY" secondItem="tfO-g2-GX0" secondAttribute="centerY" id="HmW-sw-aTT"/>
+                            <constraint firstItem="DMD-C4-K33" firstAttribute="leading" secondItem="tfO-g2-GX0" secondAttribute="leading" constant="10" id="eBf-BW-A0T"/>
+                            <constraint firstItem="qoM-1j-jIV" firstAttribute="top" secondItem="Jis-gM-fEb" secondAttribute="bottom" constant="13.666666666666629" id="ld2-HR-E1h"/>
+                            <constraint firstItem="qoM-1j-jIV" firstAttribute="centerX" secondItem="tfO-g2-GX0" secondAttribute="centerX" id="pNA-sc-ZDY"/>
+                            <constraint firstItem="tfO-g2-GX0" firstAttribute="trailing" secondItem="DMD-C4-K33" secondAttribute="trailing" constant="10" id="x61-cY-SQK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kYl-LO-fhP"/>
+                    <connections>
+                        <outlet property="actPayment" destination="qoM-1j-jIV" id="DXF-Jf-sCW"/>
+                        <outlet property="btnAdd" destination="Jis-gM-fEb" id="4zo-nX-rGP"/>
+                        <outlet property="lblMoneyBox" destination="aJF-cu-fMw" id="J28-FE-4ZC"/>
+                        <outlet property="lblPlanValue" destination="2Za-u3-HnG" id="4hA-Hf-oM6"/>
+                        <outlet property="lblProductName" destination="tfa-Id-geP" id="VQd-QE-y6k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YCk-MZ-sJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2538.1679389312976" y="-947.18309859154931"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="moneybox" width="300" height="70"/>
+        <namedColor name="AccentColor">
+            <color red="0.34299999475479126" green="0.75" blue="0.70999997854232788" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="GreyColor">
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
