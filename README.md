@@ -80,7 +80,7 @@ This view is almost like a card that pops up from the bottom of the main view, a
 
 The add button shows how much they are putting into the specified product.
 
-Again, we present a spinning activity indicator so that it does not freeze up the applicaiton when we sent a backend request.
+Again, we present a spinning activity indicator so that it does not freeze up the application when we sent a backend request.
 
 We send a refresh function to the original HomeView so that when the user dismisses this ProductDetail view, it is populated with the latest Moneybox figure. We also update the UI on this page too so when the 'Deposit Successful' alert is dismissed, there is instant feedback.
 
